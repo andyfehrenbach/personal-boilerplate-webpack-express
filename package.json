@@ -4,9 +4,11 @@
   "description": "jewelry website tut",
   "main": "index.js",
   "scripts": {
-    "start": "npm run development",
-    "development": "webpack serve --progress --config webpack.config.development.js",
-    "build": "webpack --progress --config webpack.config.build.js"
+    "backend:build": "node app.js",
+    "backend:development": "nodemon app.js",
+    "start": "npm run frontend:development",
+    "frontend:development": "webpack serve --progress --config webpack.config.development.js",
+    "frontend:build": "webpack --progress --config webpack.config.build.js"
   },
   "author": "Andy Fehrenbach",
   "license": "ISC",
@@ -41,5 +43,9 @@
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   }
 }
