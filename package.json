@@ -4,9 +4,9 @@
   "description": "jewelry website tut",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
     "backend:build": "node app.js",
     "backend:development": "nodemon app.js",
-    "start": "npm run frontend:development",
     "frontend:development": "webpack serve --progress --config webpack.config.development.js",
     "frontend:build": "webpack --progress --config webpack.config.build.js"
   },
@@ -16,6 +16,7 @@
     "@babel/core": "^7.14.3",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "concurrently": "^6.2.0",
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
     "eslint": "^7.18.0",
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
   }
 }
