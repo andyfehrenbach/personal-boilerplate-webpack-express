@@ -56,7 +56,11 @@ app.get('/about', (req, res) => {
       const { results } = response
       const [metadata, about] = results
 
-      // console.log(metadata, about)
+      // about.data.gallery.forEach(media => {
+      //   console.log(media)
+      // })
+
+      console.log(about.data.body)
 
       res.render('pages/about', {
         metadata,
