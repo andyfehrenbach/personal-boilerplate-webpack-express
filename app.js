@@ -18,6 +18,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride())
 app.use(errorHandler())
+//where can we find static files
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Link Resolver
 const handleLinkResolver = doc => {
