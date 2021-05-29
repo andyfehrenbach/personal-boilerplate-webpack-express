@@ -7,6 +7,17 @@
   width: 100%;
 }
 
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-left {
+  display: flex;
+  align-items: center;
+}
+
 @mixin placeholder {
   &.placeholder { @content; }
   &::-webkit-input-placeholder { @content; }

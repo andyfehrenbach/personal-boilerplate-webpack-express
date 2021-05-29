@@ -95,6 +95,8 @@ app.get('/detail/:uid', (req, res) => {
       fetchLinks: 'collection.title'
     })
 
+    // console.log(product);
+
     res.render('pages/detail', {
       meta,
       product,
@@ -115,7 +117,7 @@ app.get('/collections', (req, res) => {
     const results = collections.results
 
     // console.log(collections)
-    console.log(collections.results[0].data)
+    // console.log(collections.results[0].data)
 
     res.render('pages/collections', {
       meta,

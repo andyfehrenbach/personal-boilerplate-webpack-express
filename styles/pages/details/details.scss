@@ -1,67 +1,92 @@
 .detail {
-
+  @extend %cover;
+  @extend %flex-center;
+  background-color: $color-quicksand;
+  color: $color-white;
 }
 
 .detail__wrapper {
-
+  @extend %cover;
+  @extend %flex-center;
 }
 
 .detail__media {
-
+  height: 78.2rem;
+  width: 55.4rem;
+  position: relative;
 }
 
 .detail__media__image {
-
+  @extend %cover;
 }
 
 .detail__information {
-
+  margin-left: 10rem;
 }
 
 .detail__information__collection {
-
+  @extend %description-12;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
 }
 
 .detail__information__title {
-
+  @extend %title-120;
+  max-width: 60rem;
 }
 
 .detail__information__content {
-
+  padding-left: 18rem;
+  margin-top: 8rem;
 }
 
 .detail__information__highlights {
-
+  @extend %description-16;
+  max-width: 44rem;
 }
 
 .detail__information__highlight {
-
+  @extend %flex-left;
+  @include space-between(4rem);
 }
 
 .detail__information__highlight__icon {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-right: 3.75rem;
 
 }
 
 .detail__information__highlight__text {
+  @extend %description-16;
 
 }
 
 .detail__information__list {
-
+  margin-top: 4rem;
+  max-width: 70rem;
 }
 
 .detail__information__item {
-
+  @extend %flex-left;
+  justify-content: space-between;
+  @include space-between(4rem);
+  align-items: baseline;
 }
 
 .detail__information__item__title {
-
+  @extend %description-12;
+  width: 10rem;
 }
 
 .detail__information__item__description {
-
+  margin-left: 6rem;
 }
 
 .detail__information__link {
-
+  margin-top: 4rem;
+  @extend %title-30;
+  display: flex;
 }
