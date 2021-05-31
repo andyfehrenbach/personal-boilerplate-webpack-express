@@ -1,24 +1,30 @@
 .collections {
   @extend %cover;
-  background-color: $color-quicksand;
+
+  background: $color-quicksand;
   color: $color-white;
-  overflow: hidden;
 }
 
 .collections__wrapper {
   @extend %cover;
+
+  overflow: hidden;
 }
 
 .collections__titles {
- @extend .home__titles;
+  @extend %vertical-titles;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .collections__titles__label {
-  @extend .home__titles__label;
+  @extend %vertical-titles__label;
 }
 
 .collections__titles__title {
- @extend %title-200;
+  @extend %vertical-titles__title;
 }
 
 .collections__gallery {
@@ -26,47 +32,80 @@
 }
 
 .collections__gallery__wrapper {
-  @extend %flex-center;
-  @include centerer(false, true);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .collections__gallery__link {
   display: block;
-  margin-right: 4rem;
+  margin: 0 5.3rem;
 }
 
 .collections__gallery__media {
-  height: 63rem;
-  width: 44rem;
+  height: 63.1rem;
+  width: 44.7rem;
   position: relative;
 }
 
 .collections__gallery__media__image {
   @extend %cover;
+
+  object-fit: cover;
 }
 
 .collections__content {
   @extend %cover;
 
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .collections__article {
+  position: absolute;
   left: 8rem;
   bottom: 8rem;
-  position: absolute;
   opacity: 0;
-  max-width: 46rem;
 
   &--active {
     opacity: 1;
   }
 }
 
-.collections__title {
-  @extend %title-60
+.collections__article__title {
+  @extend %title-60;
 }
 
-.collections__description {
+.collections__article__description {
   @extend %description-16;
-  max-width: 44rem;
+
+  max-width: 46rem;
+}
+
+.collections__mobile {
+  position: absolute;
+  bottom: 5rem;
+  display: flex;
+  @include media('>phone') {
+    display: none;
+  }
+}
+
+.collections__mobile__item {
+  width: 100vw;
+  padding-left: 5rem;
+}
+
+.collections__mobile__item__label {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.collections__mobile__item__title {
+  font-family: $font-george-x;
+  font-size: 12rem;
 }

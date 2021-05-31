@@ -6,12 +6,13 @@
 @import './utils/responsive.scss';
 
 
-@import './base/reset.scss';
-@import './base/fonts.scss';
-@import './base/base.scss';
+@import './base/_reset.scss';
+@import './base/_fonts.scss';
+@import './base/_base.scss';
 
 @import './shared/descriptions.scss';
 @import './shared/titles.scss';
+@import './shared/vertical-title.scss';
 
 @import './components/preloader.scss';
 

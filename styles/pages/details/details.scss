@@ -1,66 +1,68 @@
 .detail {
   @extend %cover;
-  @extend %flex-center;
-  background-color: $color-quicksand;
+  @extend %center;
+
+  background: $color-quicksand;
   color: $color-white;
 
   @include media('<phone') {
     height: auto;
   }
-
 }
 
 .detail__wrapper {
-  @extend %flex-center;
+  align-items: center;
+  display: flex;
 
   @include media('<phone') {
-
-    padding: 15rem 0 31.5rem;
     display: block;
-    margin: 0 auto;
+    margin: auto;
     width: 66.1rem;
+    padding: 15rem 0 31.5rem;
   }
 }
 
 .detail__media {
-  height: 78.2rem;
   width: 55.4rem;
+  height: 78.2rem;
   position: relative;
 
   @include media('<phone') {
     width: 100%;
     height: 93.4rem;
-    margin-bottom: 7.8rem;
+    margin: 0 auto 7.8rem;
   }
-
 }
 
 .detail__media__image {
   @extend %cover;
+
+  object-fit: cover;
 }
 
 .detail__information {
-  margin-left: 10rem;
+  padding-left: 8.2rem;
 
   @include media('<phone') {
-    margin-left: 0;
+    padding-left: 0;
   }
 }
 
 .detail__information__collection {
   @extend %description-12;
+
   margin-bottom: 4rem;
   text-transform: uppercase;
 }
 
 .detail__information__title {
   @extend %title-120;
+
   max-width: 60rem;
 }
 
 .detail__information__content {
   padding-left: 18rem;
-  margin-top: 8rem;
 
   @include media('<phone') {
     padding-left: 0;
@@ -68,70 +70,77 @@
 }
 
 .detail__information__highlights {
-  @extend %description-16;
-  max-width: 44rem;
-
-  @include media('<phone') {
-    max-width: none;
-  }
+  margin-top: 6rem;
 }
 
 .detail__information__highlight {
-  @extend %flex-left;
-  @include space-between(4rem);
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
 }
 
 .detail__information__highlight__icon {
-  @include square(4rem);
+  height: 4rem;
+  width: 4rem;
   margin-right: 3.75rem;
 
   @include media('<phone') {
-    @include square(9.2rem);
-    margin-right: 12.8rem;
+    height: 9.2rem;
+    width: 9.2rem;
+    margin-right: 5.8rem;
   }
 }
 
 .detail__information__highlight__text {
   @extend %description-16;
-
 }
 
 .detail__information__list {
   margin-top: 4rem;
-  max-width: 70rem;
-
-  @include media('<phone') {
-    margin-top: 8rem;
-  }
 }
 
 .detail__information__item {
-  @extend %flex-left;
-  justify-content: space-between;
-  @include space-between(4rem);
-  align-items: baseline;
+  display: flex;
+
+  &:not(:first-child) {
+    margin-top: 4rem;
+  }
 }
 
 .detail__information__item__title {
   @extend %description-12;
-  width: 8rem;
+
+  width: 10rem;
+  padding-right: 2.5rem;
+
   @include media('<phone') {
+    padding-right: 5rem;
     width: 15rem;
   }
 }
 
 .detail__information__item__description {
+  @extend %description-16;
+
   max-width: 44rem;
 }
 
 .detail__information__link {
-  margin-top: 4rem;
   @extend %title-30;
-  display: flex;
+
+  display: inline-block;
+  margin-top: 3rem;
+
+  @include media('<phone') {
+
+  }
 }
 
 .detail__button {
-  @extend %description-16;
+  @extend %description-14;
 
   display: flex;
   align-items: center;

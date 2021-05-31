@@ -1,13 +1,5 @@
-.about__title {
-  @extend %title-100;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 127rem;
-}
-
 .about {
-  // @extend %cover;
-  background-color: $color-cadet-blue;
+  background: $color-cadet-blue;
   color: $color-gray;
 }
 
@@ -15,5 +7,14 @@
 
 }
 
+.about__title {
+  @extend %title-100;
 
+  margin: auto;
+  max-width: 125rem;
+  text-align: center;
 
+  @include media('<phone') {
+    max-width: 67.7rem;
+  }
+}

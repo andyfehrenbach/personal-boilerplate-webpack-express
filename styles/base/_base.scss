@@ -1,11 +1,12 @@
 *,
-*::before,
-*::after {
+*:after,
+*:before {
   box-sizing: border-box;
 }
 
 html {
   font-size: calc(100vw / 1920 * 10);
+  line-height: 1;
 
   @include media('<phone') {
     font-size: calc(100vw / 750 * 10);
@@ -16,15 +17,23 @@ body {
   @extend %description-16;
 
   font-family: $font-suisse-bp;
-  font-weight: 300;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: middle;
+  line-height: 1;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  vertical-align: middle;
 }

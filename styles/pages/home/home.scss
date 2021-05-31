@@ -1,55 +1,56 @@
 .home {
- color: $color-white;
- background-color: $color-contessa;
- @extend %cover;
- overflow: hidden;
+  @extend %cover;
+  @extend %center;
 
- &:before,
- &:after {
-   content: '';
-   @extend %cover;
-   height: 24rem;
-   z-index: z('content');
- }
+  overflow: hidden;
+  background: $color-contessa;
+  color: $color-white;
+  text-align: center;
 
- &:before {
-   background: linear-gradient(to bottom, $color-contessa, rgba($color-contessa, 0));
- }
+  &:before,
+  &:after {
+    content: '';
+    height: 24rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
 
- &:after {
-   background: linear-gradient(to top, $color-contessa, rgba($color-contessa, 0));
-   bottom: 0;
-   top: initial;
- }
+  &:before {
+    top: 0;
+    background: transparent linear-gradient(to bottom, $color-contessa 0%, rgba($color-contessa, 0) 100%);
+  }
+
+  &:after {
+    bottom: 0;
+    background: transparent linear-gradient(to top, $color-contessa 0%, rgba($color-contessa, 0) 100%);
+  }
 }
 
 .home__wrapper {
-  @extend %cover;
+
 }
 
 .home__titles {
-  @include centerer(true,true);
-  @extend %flex-center;
-  transform: translate(-50%, -50%)rotate(-90deg);
-  text-align: center;
-  color: $color-white;
+ @extend %vertical-titles;
 }
 
 .home__titles__label {
-  transform: rotate(90deg);
-  padding: 1rem;
+  @extend %vertical-titles__label;
 }
 
 .home__titles__title {
-  @extend %title-200;
+  @extend %vertical-titles__title;
 }
 
 .home__gallery {
+  @extend %cover;
   display: none;
 }
 
-.Home__gallery__media {
-
+.home__gallery__media {
+  position: absolute;
 }
 
 .home__gallery__media__image {
@@ -57,15 +58,25 @@
 }
 
 .home__link {
-  @include centerer(true, false);
-  @extend %flex-center;
+  @extend %description-14;
   width: 28.8rem;
   height: 6rem;
+  position: absolute;
+  z-index: 2;
   bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
-  @extend %description-16;
-  z-index: z('navigation');
-  letter-spacing: 0.1em;
+
+  @include media('<phone') {
+    bottom: 7.5rem;
+    width: 55rem;
+    height: 13.7rem;
+  }
 }
 
 .home__link__icon {
