@@ -54,6 +54,21 @@
   }
 }
 
+@mixin square($width) {
+  width: $width;
+  height: $width;
+  min-width: $width;
+  min-height: $width;
+}
+
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  min-width: $width;
+  min-height: $width;
+  border-radius: 50%;
+}
+
 %font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

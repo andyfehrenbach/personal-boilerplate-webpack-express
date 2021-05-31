@@ -10,20 +10,15 @@
 }
 
 .collections__titles {
-  @include centerer(true,true);
-  @extend %flex-center;
-  transform: translate(-50%, -50%)rotate(-90deg);
-  text-align: center;
-  color: $color-white;
+ @extend .home__titles;
 }
 
 .collections__titles__label {
-  transform: rotate(90deg);
-  padding: 1rem;
+  @extend .home__titles__label;
 }
 
 .collections__titles__title {
-  @extend %title-200;
+ @extend %title-200;
 }
 
 .collections__gallery {

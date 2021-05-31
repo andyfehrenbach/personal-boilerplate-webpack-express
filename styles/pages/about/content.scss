@@ -1,21 +1,42 @@
 .about__content {
+  margin: 20rem auto;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--right {
+    .about__content__media {
+      order: -1;
+    }
+  }
 }
 
 .about__content__wrapper {
-
+  @extend %flex-center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 30rem;
 }
 
 .about__content__label {
-
+  @extend %description-16;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .about__content__description {
-
+  max-width: 26%;
+  margin-left: -12rem;
 }
 
 .about__content__media {
-
+  max-width: 35%;
 }
 
 .about__content__media__image {

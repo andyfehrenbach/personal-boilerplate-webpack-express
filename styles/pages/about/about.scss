@@ -1,9 +1,14 @@
 .about__title {
-
+  @extend %title-100;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 127rem;
 }
 
 .about {
-
+  // @extend %cover;
+  background-color: $color-cadet-blue;
+  color: $color-gray;
 }
 
 .about__wrapper {

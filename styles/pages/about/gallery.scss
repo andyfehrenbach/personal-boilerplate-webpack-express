@@ -1,15 +1,32 @@
 .about__gallery {
+  height: 58.6rem;
+  position: relative;
+  margin: 20rem 0;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .about__gallery__wrapper {
-
+  @extend %cover;
+  @extend %flex-center;
+  overflow: scroll;
 }
 
 .about__gallery__media {
-
+  display: flex;
+  margin: 0 4rem;
+  position: relative;
+  height: 100%;
+  min-width: 30rem;
 }
 
 .about__gallery__media__image {
-
+  @extend %cover;
+  object-fit: contain;
 }
